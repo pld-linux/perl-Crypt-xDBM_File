@@ -7,13 +7,12 @@
 Summary:	Crypt::xDBM_File Perl module - encrypt almost any kind of dbm file
 Summary(pl):	Modu³ Perla Crypt::xDBM_File - szyfrowanie prawie wszystkich rodzajów plików dbm
 Name:		perl-Crypt-xDBM_File
-Version:	0.80
-Release:	2
+Version:	1.01
+Release:	1
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2c07a00db6ac16c3f93f95767b055645
-Patch0:		%{name}-DES.patch
+# Source0-md5:	4e1c91ebbf896ae094c7b150e4c67883
 BuildRequires:	perl-devel >= 5.6
 %{!?_without_tests:BuildRequires:	perl-Crypt-Blowfish}
 %{!?_without_tests:BuildRequires:	perl-Crypt-DES}
@@ -41,7 +40,6 @@ wszystkie dzia³aæ).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch -p1
 
 %build
 %{__perl} Makefile.PL \
