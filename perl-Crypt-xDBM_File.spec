@@ -11,7 +11,7 @@ Version:	0.80
 Release:	1
 License:	unknown
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-DES.patch
 BuildRequires:	perl >= 5.6
 %{!?_without_tests:BuildRequires:	perl-Crypt-Blowfish}
