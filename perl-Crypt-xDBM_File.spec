@@ -13,7 +13,7 @@ License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-DES.patch
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl-devel >= 5.6
 %{!?_without_tests:BuildRequires:	perl-Crypt-Blowfish}
 %{!?_without_tests:BuildRequires:	perl-Crypt-DES}
 %{!?_without_tests:BuildRequires:	perl-Crypt-IDEA}
