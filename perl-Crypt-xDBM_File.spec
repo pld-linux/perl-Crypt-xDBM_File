@@ -3,8 +3,8 @@
 %bcond_without	tests	# Do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Crypt
-%define	pnam	xDBM_File
+%define		pdir	Crypt
+%define		pnam	xDBM_File
 Summary:	Crypt::xDBM_File Perl module - encrypt almost any kind of dbm file
 Summary(pl):	Modu³ Perla Crypt::xDBM_File - szyfrowanie prawie wszystkich rodzajów plików dbm
 Name:		perl-Crypt-xDBM_File
