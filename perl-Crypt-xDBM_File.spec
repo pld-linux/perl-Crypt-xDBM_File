@@ -12,6 +12,7 @@ Release:	2
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	2c07a00db6ac16c3f93f95767b055645
 Patch0:		%{name}-DES.patch
 BuildRequires:	perl-devel >= 5.6
 %{!?_without_tests:BuildRequires:	perl-Crypt-Blowfish}
