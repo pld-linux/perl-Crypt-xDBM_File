@@ -1,6 +1,7 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# Do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	xDBM_File
@@ -14,9 +15,11 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	4e1c91ebbf896ae094c7b150e4c67883
 BuildRequires:	perl-devel >= 5.6
-%{!?_without_tests:BuildRequires:	perl-Crypt-Blowfish}
-%{!?_without_tests:BuildRequires:	perl-Crypt-DES}
-%{!?_without_tests:BuildRequires:	perl-Crypt-IDEA}
+%if %{with tests}
+BuildRequires:	perl-Crypt-Blowfish
+BuildRequires:	perl-Crypt-DES
+BuildRequires:	perl-Crypt-IDEA
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -45,7 +48,7 @@ wszystkie dzia³aæ).
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
