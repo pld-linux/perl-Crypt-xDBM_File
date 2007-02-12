@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	xDBM_File
 Summary:	Crypt::xDBM_File Perl module - encrypt almost any kind of dbm file
-Summary(pl):	Modu³ Perla Crypt::xDBM_File - szyfrowanie prawie wszystkich rodzajów plików dbm
+Summary(pl.UTF-8):   ModuÅ‚ Perla Crypt::xDBM_File - szyfrowanie prawie wszystkich rodzajÃ³w plikÃ³w dbm
 Name:		perl-Crypt-xDBM_File
 Version:	1.01
 Release:	2
@@ -32,14 +32,14 @@ crypt function can be any of the CPAN modules that use encrypt,
 decrypt, keysize, blocksize (so Crypt::IDEA, Crypt::DES,
 Crypt::Blowfish... should all work).
 
-%description -l pl
-Modu³ Crypt::xDBM_File szyfruje i deszyfruje dane w plikach gdbm,
-ndbm, sdbm (byæ mo¿e tak¿e BerkeleyDB, ale nie by³o to testowane przez
-autora). Modu³ przywi±zuje siê do hasza, do którego mo¿na potem
-odwo³ywaæ siê w normalny sposób. Funkcj± szyfruj±ca mo¿e byæ dowolny z
-modu³ów CPAN u¿ywaj±cy funkcji encrypt, decrypt, keysize, blocksize
-(czyli modu³y Crypt::IDEA, Crypt::DES, Crypt::Blowfish... powinny
-wszystkie dzia³aæ).
+%description -l pl.UTF-8
+ModuÅ‚ Crypt::xDBM_File szyfruje i deszyfruje dane w plikach gdbm,
+ndbm, sdbm (byÄ‡ moÅ¼e takÅ¼e BerkeleyDB, ale nie byÅ‚o to testowane przez
+autora). ModuÅ‚ przywiÄ…zuje siÄ™ do hasza, do ktÃ³rego moÅ¼na potem
+odwoÅ‚ywaÄ‡ siÄ™ w normalny sposÃ³b. FunkcjÄ… szyfrujÄ…ca moÅ¼e byÄ‡ dowolny z
+moduÅ‚Ã³w CPAN uÅ¼ywajÄ…cy funkcji encrypt, decrypt, keysize, blocksize
+(czyli moduÅ‚y Crypt::IDEA, Crypt::DES, Crypt::Blowfish... powinny
+wszystkie dziaÅ‚aÄ‡).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
