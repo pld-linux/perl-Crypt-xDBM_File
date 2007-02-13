@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	xDBM_File
 Summary:	Crypt::xDBM_File Perl module - encrypt almost any kind of dbm file
-Summary(pl.UTF-8):   Moduł Perla Crypt::xDBM_File - szyfrowanie prawie wszystkich rodzajów plików dbm
+Summary(pl.UTF-8):	Moduł Perla Crypt::xDBM_File - szyfrowanie prawie wszystkich rodzajów plików dbm
 Name:		perl-Crypt-xDBM_File
 Version:	1.01
 Release:	2
