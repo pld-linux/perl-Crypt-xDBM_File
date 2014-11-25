@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# Do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Crypt
 %define		pnam	xDBM_File
+%include	/usr/lib/rpm/macros.perl
 Summary:	Crypt::xDBM_File Perl module - encrypt almost any kind of dbm file
 Summary(pl.UTF-8):	Moduł Perla Crypt::xDBM_File - szyfrowanie prawie wszystkich rodzajów plików dbm
 Name:		perl-Crypt-xDBM_File
@@ -14,13 +14,14 @@ License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	21faa44ad66396b674ee8726abdf8b44
+URL:		http://search.cpan.org/dist/Crypt-xDBM_File/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Crypt-Blowfish
 BuildRequires:	perl-Crypt-DES
 BuildRequires:	perl-Crypt-IDEA
 %endif
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
